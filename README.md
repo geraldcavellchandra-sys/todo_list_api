@@ -120,6 +120,7 @@ curl -X PUT http://127.0.0.1:5000/todos/1 \
 # Delete a todo
 curl -X DELETE http://127.0.0.1:5000/todos/1
 
-![alt text](image-5.png)
+![Server running screenshot](images/image-5.png)
+
 
 ---

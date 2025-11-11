@@ -18,7 +18,7 @@ The API is built using **Flask**, a micro web framework for Python, and can be t
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 - **Python 3.x**
 - **Flask**
@@ -38,14 +38,14 @@ The API is built using **Flask**, a micro web framework for Python, and can be t
 
 ---
 
-## ⚙️ Setup Instructions (Using Postman)
+## Setup Instructions (Using Postman)
 
 1. **Start your API server:**
    - Open Command Prompt or VS Code terminal.
    - Navigate to your project directory:
      ```bash
      cd Desktop\todo_list_api
-     ![alt text](image-6.png)
+
      ```
    - Run the Flask app:
      ```bash
@@ -53,7 +53,8 @@ The API is built using **Flask**, a micro web framework for Python, and can be t
      ```
    - Your server should start at:  
      http://127.0.0.1:5000
-     ![alt text](image-5.png)
+     ![alt text](image.png)
+     
 
 2. **Open Postman** and create new requests for each endpoint:
 
@@ -61,7 +62,7 @@ The API is built using **Flask**, a micro web framework for Python, and can be t
      - URL: `http://127.0.0.1:5000/todos`
      - Click **Send**
      - You should receive a list of all todos.
-![alt text](image.png)
+![alt text](image-1.png)
 
    - **POST Request**
      - URL: `http://127.0.0.1:5000/todos`
@@ -119,4 +120,4 @@ curl -X PUT http://127.0.0.1:5000/todos/1 \
 # Delete a todo
 curl -X DELETE http://127.0.0.1:5000/todos/1
 
-![alt text](image-7.png)
+![alt text](image-5.png)

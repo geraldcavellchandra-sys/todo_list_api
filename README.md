@@ -188,8 +188,5 @@ Response:
 ![alt text](image-9.png)
 
 ## Example API Call Log (from Flask Server)
-127.0.0.1 - - [11/Nov/2025 12:08:50] "GET /todos HTTP/1.1" 200 -
-127.0.0.1 - - [11/Nov/2025 12:10:10] "POST /todos HTTP/1.1" 201 -
-127.0.0.1 - - [11/Nov/2025 12:11:05] "PUT /todos/1 HTTP/1.1" 200 -
-127.0.0.1 - - [11/Nov/2025 12:11:26] "DELETE /todos/1 HTTP/1.1" 200 -
+
 ![alt text](image-6.png)

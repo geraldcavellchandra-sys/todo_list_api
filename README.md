@@ -97,30 +97,99 @@ The API is built using **Flask**, a micro web framework for Python, and can be t
 
 ---
 
-## Example API Calls
+## Example API Calls (Postman)
 
-### Using cURL
-```bash
-# Get all todos
-curl http://127.0.0.1:5000/todos
+- **1. GET – Retrieve all todos**
+
+Request:
+
+Method: GET
+
+URL: http://127.0.0.1:5000/todos
+
+Response:
+
+[
+  {
+    "id": 1,
+    "status": "pending",
+    "task": "Finish homework"
+  },
+  {
+    "id": 2,
+    "status": "completed",
+    "task": "Buy groceries"
+  }
+]
+![alt text](image-7.png)
+
+- **2. POST – Add a new todo**
+
+Request:
+
+Method: POST
+
+URL: http://127.0.0.1:5000/todos
+
+Body (raw JSON):
+
+{
+  "task": "Wash the car",
+  "status": "pending"
+}
 
 
-# Add a new todo
-curl -X POST http://127.0.0.1:5000/todos \
--H "Content-Type: application/json" \
--d "{\"task\":\"Wash the car\"}"
+Response:
+
+{
+  "id": 3,
+  "status": "pending",
+  "task": "Wash the car"
+}
+![alt text](image-5.png)
+- **3. PUT – Update a todo**
+
+Request:
+
+Method: PUT
+
+URL: http://127.0.0.1:5000/todos/1
+
+Body (raw JSON):
+
+{
+  "task": "Buy groceries and cook dinner",
+  "status": "done"
+}
 
 
-# Update a todo
-curl -X PUT http://127.0.0.1:5000/todos/1 \
--H "Content-Type: application/json" \
--d "{\"task\":\"Buy groceries and cook dinner\", \"status\":\"done\"}"
+Response:
 
+{
+  "id": 1,
+  "status": "done",
+  "task": "Buy groceries and cook dinner"
+}
+![alt text](image-8.png)
 
-# Delete a todo
-curl -X DELETE http://127.0.0.1:5000/todos/1
+- **4. DELETE – Remove a todo**
 
-![Server running screenshot](images/image-5.png)
+Request:
 
+Method: DELETE
 
----
+URL: http://127.0.0.1:5000/todos/1
+
+Response:
+
+{
+  "message": "Todo deleted successfully"
+}
+![alt text](image-9.png)
+
+## Example API Call Log (from Flask Server)
+127.0.0.1 - - [11/Nov/2025 12:08:50] "GET /todos HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 12:10:10] "POST /todos HTTP/1.1" 201 -
+127.0.0.1 - - [11/Nov/2025 12:11:05] "PUT /todos/1 HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 12:11:26] "DELETE /todos/1 HTTP/1.1" 200 -
+![alt text](image-6.png)
